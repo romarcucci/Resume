@@ -1,0 +1,143 @@
+// General styles 
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../node_modules/font-awesome/fonts/FontAwesome.otf");
+}
+
+// Font-awesome
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+@mixin icon($icon: "\f1fd", $size: 20px, $margin-r: 5px, $margin-l: 5px) {
+  font-family: FontAwesome;
+  margin-right: $margin-r;
+  margin-left: $margin-l;
+  font-size: $size;
+  content: $icon;
+}
+
+.container{
+  background-color: rgb(235, 235, 235);
+}
+
+li{
+  list-style: none;
+}
+
+#presentation{
+  background-color: rgb(0, 22, 118);
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 220px;
+  border-right: 2px solid lightgray;
+  #profil{
+    text-align: center;
+    img{
+      background-color: white;
+      padding: 5px;
+    }
+  }
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #accroche{
+    font-style: italic;
+  }
+}
+
+#coordonnees{
+  background-color: rgb(0, 22, 118);
+  color:white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 220px;
+  li{
+    font-size: 18px;
+    margin: 5px;
+  }
+  #mail::before{
+    @include icon("\f0e0", 20px, 23px, 0px); 
+  }  
+  #tel::before{
+    @include icon("\f095", 20px, 26px, 0px);
+  }  
+  #address::before{
+    @include icon("\f015", 20px, 23px, 0px);
+  }  
+  #birthdate::before{
+    @include icon("\f1fd", 20px, 22px, 0px);
+  }  
+  #driving::before{
+    @include icon("\f2c2", 20px, 20px, 0px);
+  }
+}
+
+#corp{
+  #experiences::before{
+    @include icon("\f0b1", 40px);
+  }  
+  #formation::before{
+    @include icon("\f02d", 40px);
+  } 
+}
+
+aside{
+  border-top: 2px solid lightgray;
+  background-color: rgb(80, 102, 198);
+  color: white;
+  h2{
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  #competences::before{
+    @include icon("\f013", 25px);
+  }
+
+  h3{
+    width: 96%;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 21px;
+  }
+  #langues::before{
+    @include icon("\f1ab", 25px);
+  }  
+  h4{
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  #list-langues li{
+    font-size: 18px;
+  }
+  .list {
+    li{
+      list-style: square;
+    }
+    p{
+      text-align: justify;
+      font-size: 16px;
+      font-style: italic;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  #langages::before{
+    @include icon("\f121", 25px);
+  } 
+  #technologies::before{
+    @include icon("\f26c", 25px);
+  } 
+}
