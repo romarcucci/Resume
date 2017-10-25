@@ -78,12 +78,40 @@ li{
 }
 
 #corp{
+  h1{
+    background-color: darkblue;
+    color: white;
+    border-radius: 18px;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
   #experiences::before{
-    @include icon("\f0b1", 40px);
+    @include icon("\f0b1", 25px);
+    margin-right: 20px;
   }  
   #formation::before{
-    @include icon("\f02d", 40px);
+    @include icon("\f02d", 25px);
+    margin-right: 20px;
   } 
+  .date{
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .intitule{
+    margin-top: 20px;
+  }
+  .address{
+    color: darkblue;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .list-mission li{
+    list-style-type: disc;
+    margin-left: 15px;
+    margin-right: 50px;
+    text-align: justify;
+  }
 }
 
 aside{
@@ -105,6 +133,7 @@ aside{
 
   h3{
     width: 96%;
+    margin-left: 2%;
     background-color: white;
     color: black;
     border-radius: 15px;
