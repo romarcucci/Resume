@@ -47,6 +47,9 @@ li{
   }
   #accroche{
     font-style: italic;
+    text-align: justify;
+    margin-right: 5%;
+    margin-top: 5%;
   }
 }
 
@@ -91,7 +94,11 @@ li{
     margin-right: 20px;
   }  
   #formation::before{
-    @include icon("\f02d", 25px);
+    @include icon("\f19d", 25px);
+    margin-right: 20px;
+  } 
+  #projets::before{
+    @include icon("\f1c9", 25px);
     margin-right: 20px;
   } 
   .date{
@@ -141,9 +148,6 @@ aside{
     font-weight: bold;
     font-size: 21px;
   }
-  #langues::before{
-    @include icon("\f1ab", 25px);
-  }  
   h4{
     margin-right: 10px;
     font-weight: bold;
@@ -166,7 +170,29 @@ aside{
   #langages::before{
     @include icon("\f121", 25px);
   } 
-  #technologies::before{
-    @include icon("\f26c", 25px);
+  #langues::before{
+    @include icon("\f1ab", 25px);
   } 
+  #technologies::before{
+    @include icon("\f109", 25px);
+  } 
+  
+  #interets::before{
+    @include icon("\f0ae", 25px);
+  }
+  #cinema::before{
+    @include icon("\f03d", 20px, 11px);
+  }
+  #musique::before{
+    @include icon("\f001", 20px, 15px);
+  }
+  #poker::before{
+    @include icon("\f155", 20px, 20px);
+  }
+  #golf::before{
+    @include icon("\f024", 20px, 12px);
+  }
+  #list-interets{
+    font-size: 14px; 
+  }
 }
