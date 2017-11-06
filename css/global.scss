@@ -20,6 +20,11 @@
   content: $icon;
 }
 
+// Colors
+$lightblue: rgb(120, 150, 235);
+$darkblue: rgb(60, 80, 180);
+
+
 .container{
   background-color: rgb(235, 235, 235);
 }
@@ -29,17 +34,18 @@ li{
 }
 
 #presentation{
-  background-color: rgb(0, 22, 118);
+  background-color: $darkblue;
   color: white;
   padding-top: 2%;
   padding-bottom: 2%;
-  height: 220px;
-  border-right: 2px solid lightgray;
+  height: 30rem;
+  border-right: 0.2rem solid lightgray;
   #profil{
+    margin-top: 2rem;
     text-align: center;
     img{
       background-color: white;
-      padding: 5px;
+      padding: 0.5rem;
     }
   }
   h1{
@@ -50,92 +56,124 @@ li{
     text-align: justify;
     margin-right: 5%;
     margin-top: 5%;
+    font-size: 1.8rem;
   }
 }
 
 #coordonnees{
-  background-color: rgb(0, 22, 118);
+  background-color: $darkblue;
   color:white;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  height: 220px;
+  padding-top: 5%;
+  height: 30rem;
   li{
-    font-size: 18px;
-    margin: 5px;
+    font-size: 2rem;
+    margin: 0.5rem;
   }
   #mail::before{
-    @include icon("\f0e0", 20px, 23px, 0px); 
+    @include icon("\f0e0", 2rem, 2.3rem, 0px); 
   }  
   #tel::before{
-    @include icon("\f095", 20px, 26px, 0px);
+    @include icon("\f095", 2rem, 2.6rem, 0px);
   }  
   #address::before{
-    @include icon("\f015", 20px, 23px, 0px);
+    @include icon("\f015", 2rem, 2.3rem, 0px);
   }  
   #birthdate::before{
-    @include icon("\f1fd", 20px, 22px, 0px);
+    @include icon("\f1fd", 2rem, 2.2rem, 0px);
   }  
   #driving::before{
-    @include icon("\f2c2", 20px, 20px, 0px);
+    @include icon("\f2c2", 2rem, 2rem, 0px);
   }
 }
 
 #corp{
   h1{
-    background-color: darkblue;
+    background-color: $darkblue;
     color: white;
-    border-radius: 18px;
-    padding: 10px;
-    font-size: 25px;
+    border-radius: 1.8rem;
+    padding: 1rem;
+    font-size: 2.5rem;
     font-weight: bold;
   }
   #experiences::before{
-    @include icon("\f0b1", 25px);
+    @include icon("\f0b1", 2.5rem);
     margin-right: 20px;
   }  
   #formation::before{
-    @include icon("\f19d", 25px);
-    margin-right: 20px;
+    @include icon("\f19d", 2.5rem);
+    margin-right: 2rem;
   } 
   #projets::before{
-    @include icon("\f1c9", 25px);
-    margin-right: 20px;
+    @include icon("\f1c9", 2.5rem);
+    margin-right: 2rem;
   } 
   .date{
-    margin-top: 20px;
+    margin-top: 2rem;
     font-weight: bold;
+    font-size: 2rem;
   }
   .intitule{
-    margin-top: 20px;
+    margin-top: 2rem;
+    font-size: 2rem;
   }
   .address{
-    color: darkblue;
+    color: $darkblue;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 1.5rem;
+  }
+  .school{
+    color: $darkblue;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .theme{
+    font-size: 2rem;
   }
   .list-mission li{
     list-style-type: disc;
-    margin-left: 15px;
-    margin-right: 50px;
+    margin-left: 1.5rem;
+    margin-right: 5rem;
     text-align: justify;
+    font-size: 1.8rem;
+  }  
+  .list-interets li{
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 15rem;
+  }
+  #interets::before{
+    @include icon("\f0ae", 2.5rem, 2rem);
+  }
+  #cinema::before{
+    @include icon("\f03d", 2rem, 1.1rem);
+  }
+  #musique::before{
+    @include icon("\f001", 2rem, 1.5rem);
+  }
+  #poker::before{
+    @include icon("\f155", 2rem, 2rem);
+  }
+  #golf::before{
+    @include icon("\f024", 2rem, 1.2rem);
   }
 }
 
 aside{
   border-top: 2px solid lightgray;
-  background-color: rgb(80, 102, 198);
+  background-color: $lightblue;
   color: white;
   h2{
     width: 100%;
     background-color: lightgray;
     color: black;
-    border-radius: 15px;
-    padding: 5px;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 2.5rem;
   }
   #competences::before{
-    @include icon("\f013", 25px);
+    @include icon("\f013", 2.5rem, 1.5rem);
   }
 
   h3{
@@ -143,56 +181,38 @@ aside{
     margin-left: 2%;
     background-color: white;
     color: black;
-    border-radius: 15px;
-    padding: 5px;
+    border-radius: 1.5rem;
+    padding: 0.5rem;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 2.1rem;
   }
   h4{
-    margin-right: 10px;
+    margin-right: 1rem;
     font-weight: bold;
   }
   #list-langues li{
-    font-size: 18px;
+    font-size: 2rem;
   }
   .list {
+    font-size: 2rem;
     li{
       list-style: square;
     }
     p{
       text-align: justify;
-      font-size: 16px;
+      font-size: 2rem;
       font-style: italic;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
   }
   #langages::before{
-    @include icon("\f121", 25px);
+    @include icon("\f121", 2.5rem);
   } 
   #langues::before{
-    @include icon("\f1ab", 25px);
+    @include icon("\f1ab", 2.5rem);
   } 
   #technologies::before{
-    @include icon("\f109", 25px);
+    @include icon("\f109", 2.5rem);
   } 
-  
-  #interets::before{
-    @include icon("\f0ae", 25px);
-  }
-  #cinema::before{
-    @include icon("\f03d", 20px, 11px);
-  }
-  #musique::before{
-    @include icon("\f001", 20px, 15px);
-  }
-  #poker::before{
-    @include icon("\f155", 20px, 20px);
-  }
-  #golf::before{
-    @include icon("\f024", 20px, 12px);
-  }
-  #list-interets{
-    font-size: 14px; 
-  }
 }
